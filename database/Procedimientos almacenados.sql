@@ -51,27 +51,5 @@ BEGIN
 END $$
 
 
+CALL spu_alignment_list();
 
--- Procedimiento del segundo filtro 2 
-
-DELIMITER $$
-CREATE PROCEDURE spu_publisher_height
-(
-	IN _publisher_id	INT,
-	IN _height_min_cm	INT,
-	IN _height_max_cm	INT
-)
-BEGIN
-	SELECT
-		SH.id,
-		SH.superhero_name,
-		AL.alignment,
-		SH.height_cm,
-		SH.weight_kg,
-		PB.publisher_name
-	FROM superhero SH
-	INNER JOIN alignment AL ON AL.id = SH.alignment_id
-	INNER JOIN publisher PB ON PB.id = SH.publisher_id
-	WHERE publisher_id = _publisher_id AND height_cm BETWEEN _height_min_cm AND _height_max_cm
-	ORDER BY SH.id;
-END $$
