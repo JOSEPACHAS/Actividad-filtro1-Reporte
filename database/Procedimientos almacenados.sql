@@ -1,7 +1,6 @@
-DELIMITER $$
-
 -- Procedimiento almacenado: spu_superhero_list_publisher_alignment
 -- Obtiene una lista de superhéroes filtrada por un editor y una alineación específicos.
+DELIMITER $$
 CREATE PROCEDURE spu_superhero_list_publisher_alignment
 (
 	IN _publisher_id	INT,     -- Parámetro de entrada: ID del editor

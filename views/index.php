@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body style="background: center/cover no-repeat url('./img/marjan-blan-jhARm0AqF_E-unsplash.jpg'); min-height: 100vh; color: aliceblue;">
 
   <div class="container">
     
@@ -33,9 +33,7 @@
             Filtro de casas y bando
           </div>
           <div class="card-body">
-
             <div class="row">
-
               <!-- Primer filtro de casas -->
               <div class="col-md-5">
                 <label for="">Casa distribuidora</label>
@@ -43,7 +41,6 @@
                   <option value="0">Seleccione</option>
                 </select>
               </div>
-
               <!-- Segundo filtro de bandos -->
               <div class="col-md-5">
                 <label for="">Bando</label>
@@ -51,7 +48,6 @@
                   <option value="0">Seleccione</option>
                 </select>
               </div>
-
               <div class="col-md-2 mt-4">
                 <div class="d-grid">
                   <button type="button" id="generarPDF" class="btn btn-secondary">Generar PDF</button>
@@ -66,7 +62,7 @@
     <!-- Datos - tabla -->
     <div class="row mt-2">
       <div class="col-md-12">
-        <table class="table display   responsive nowrap table-striped" id="table-superhero">
+        <table class="table display   responsive nowrap" style="background: rgba(0, 0, 0, 0.05); backdrop-filter: blur(15px);" id="table-superhero">
           <colgroup>
             <col width="5%">
             <col width="20%">
@@ -158,7 +154,7 @@
 
                 let tableRow =
                   `
-                <tr>
+                <tr class='text-light'>
                   <td>${element['id']}</td>
                   <td>${element['superhero_name']}</td>
                   <td>${element['full_name']}</td>
